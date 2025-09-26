@@ -1,7 +1,8 @@
 # Module 3.1 Probability and Statistics - Study Notes
 
 ## Overview
-This module covers the mathematical foundations for quantifying uncertainty and making data-driven decisions in machine learning. It encompasses probability theory, statistical distributions, and inferential statistics.
+This module covers the mathematical foundations for quantifying uncertainty and making data-driven decisions in machine learning. It encompasses probability theory, statistic- **Binomial/Multinomial/Poisson**: common discrete counts
+- **Exponential**: waiting time between events distributions, and inferential statistics.
 
 ### Executive Summary
 
@@ -23,6 +24,7 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 | **Uniform Distribution** | All outcomes have equal probability across the range | Every possibility is equally likely (like a fair die) |
 | **Normal Distribution** | Bell-shaped curve where values cluster around the mean | Most values are average, few are extremely high or low |
 | **Binomial Distribution** | Counts successes in fixed number of independent binary trials | Counting wins/losses in repeated yes/no situations |
+| **Multinomial Distribution** | Generalization of binomial for multiple outcome categories | Counting votes for different candidates in an election |
 | **Poisson Distribution** | Models count of events occurring in fixed time/space intervals | How many times something happens in a given period |
 | **Exponential Distribution** | Models time between events in random processes | How long you wait between random events |
 | **Central Limit Theorem** | Sample means become normally distributed with sufficient sample size | Take enough samples and they'll form a bell curve |
@@ -273,7 +275,17 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 - **Medicine**: Success rates of medical treatments
 - **Quality Control**: Defective products in manufacturing batches
 
-### 17. Poisson Distribution
+### 17. Multinomial Distribution
+**Concept**: Generalization of the binomial distribution for more than two outcome categories.
+
+**Explanation**: Models the probability of observing a specific count for each category when there are multiple possible outcomes in each trial.
+
+**Real-life Examples**:
+- **Genetics**: Predicting the frequency of different eye colors (e.g., blue, brown, green) in a population.
+- **Elections**: Counting votes for multiple candidates.
+- **Surveys**: Analyzing responses to a multiple-choice question (e.g., "Agree", "Neutral", "Disagree").
+
+### 18. Poisson Distribution
 **Concept**: Models count of events occurring in fixed time/space intervals.
 
 **Explanation**: Used when events occur independently at constant average rate.
@@ -283,7 +295,7 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 - **Traffic Engineering**: Cars passing through intersection per minute
 - **Healthcare**: Patient arrivals at emergency room
 
-### 18. Exponential Distribution
+### 19. Exponential Distribution
 **Concept**: Models time between events in Poisson process.
 
 **Explanation**: Describes waiting times between random events.
@@ -316,7 +328,7 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 
 ## Part 7: Statistical Inference
 
-### 19. Z-Scores
+### 20. Z-Scores
 **Concept**: Standardizes values by showing how many standard deviations from the mean.
 
 **Formula**: z = (x - μ) / σ
@@ -328,7 +340,7 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 - **Medical Diagnosis**: Identifying abnormal lab values
 - **Sports Analytics**: Comparing player performance across seasons
 
-### 20. P-Values
+### 21. P-Values
 **Concept**: Probability of observing results at least as extreme as observed, assuming null hypothesis is true.
 
 > Common pitfalls (read this!):
@@ -343,7 +355,7 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 - **Marketing Research**: Testing if new ad campaign significantly increases sales
 - **Quality Control**: Checking if process changes significantly affect product quality
 
-### 21. Confidence Intervals
+### 22. Confidence Intervals
 **Concept**: Range of values likely to contain true population parameter with specified confidence level.
 
 **Formula**: CI = x̄ ± (z × SE)
@@ -359,7 +371,7 @@ This module covers the mathematical foundations for quantifying uncertainty and 
 
 ## Part 8: Hypothesis Testing
 
-### 22. T-Tests
+### 23. T-Tests
 **Concept**: Compare means between groups or against reference values.
 
 **Which test when?**
@@ -382,7 +394,7 @@ Quick checklist:
 - **Education**: Comparing test scores between teaching methods (independent t-test)
 - **Business**: Testing if average customer wait time exceeds target (one-sample t-test)
 
-### 23. ANOVA (Analysis of Variance)
+### 24. ANOVA (Analysis of Variance)
 **Concept**: Compares means across multiple groups simultaneously.
 
 **Explanation**: Extension of t-test for more than two groups; tests if at least one group differs.
@@ -392,7 +404,7 @@ Quick checklist:
 - **Psychology**: Testing effectiveness of multiple therapy approaches
 - **Manufacturing**: Comparing quality across different production shifts
 
-### 24. Chi-Square Test
+### 25. Chi-Square Test
 **Concept**: Tests relationships between categorical variables.
 
 > Usage notes:
@@ -411,7 +423,7 @@ Quick checklist:
 
 ## Part 9: Information Theory
 
-### 25. Shannon Entropy
+### 26. Shannon Entropy
 **Concept**: Measures uncertainty or information content in a probability distribution.
 
 **Formula**: H(X) = -Σ P(x) log P(x)
@@ -423,7 +435,7 @@ Quick checklist:
 - **Machine Learning**: Feature selection based on information gain
 - **Communications**: Error correction in data transmission
 
-### 26. Cross-Entropy
+### 27. Cross-Entropy
 **Concept**: Measures difference between predicted and actual probability distributions.
 
 **Explanation**: Common loss function in machine learning classification problems.
@@ -437,7 +449,7 @@ Quick checklist:
 
 ## Part 10: Advanced Concepts
 
-### 27. R-Squared (Coefficient of Determination)
+### 28. R-Squared (Coefficient of Determination)
 **Concept**: Proportion of variance in dependent variable explained by independent variable(s).
 
 > Caveats:
@@ -454,7 +466,7 @@ Quick checklist:
 - **Marketing**: Advertising budget's effect on sales revenue
 - **Education**: Study time's impact on exam performance
 
-### 28. Correlation vs. Causation
+### 29. Correlation vs. Causation
 **Concept**: Statistical relationship doesn't imply one variable causes another.
 
 **Explanation**: Requires temporal precedence, covariation, and elimination of confounding variables to infer causation.
